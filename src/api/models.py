@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import String, Boolean
+from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
 from flask_bcrypt import generate_password_hash, check_password_hash
 
@@ -16,11 +16,11 @@ class User(db.Model):
         String(120), nullable=False)
     email: Mapped[str] = mapped_column(
         String(120), unique=True, nullable=False)
-    password_hash: Mapped[str] = mapped_column(String(120), nullable= False )
+    password_hash: Mapped[str] = mapped_column(String(120), nullable=False)
 
     def generate(self, password):
         self.password_hash = generate_password_hash(password).decode("utf-8")
-    
+
     def check(self, password):
         return check_password_hash(self.password_hash, password)
 
@@ -28,6 +28,7 @@ class User(db.Model):
         return {
             "id": self.id,
             "username": self.username,
+            "firstname": self.firstname,
+            "lastname": self.lastname,
             "email": self.email
         }
-

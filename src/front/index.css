@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(https://preview.redd.it/secrets-of-the-new-login-screen-v0-fi7kpeywwb8d1.png?width=1425&format=png&auto=webp&s=aae2e0589e05b0f5fe67388e62f167e9002c298f);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Fredoka", sans-serif;
+}
+.logo {
+  width: 125px;
+}
+.container-login {
+  height: 60vh;
+}
+.container-login__form {
+  background-color: #494952;
+}
+.container-login__form input,
+.container-login__form input:hover,
+.container-login__form input:active {
+  background-color: #494952;
+  color: #fff;
+}
+.container-login__form input:hover,
+.container-login__form input:active {
+  border: 2px solid #7289da;
+  box-shadow: none;
+}
+.btn-register,
+.btn-discord {
+  background-color: #7289da;
+}
+.btn-register,
+.btn-discord:hover {
+  background-color: #667ed4;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+.reset-pass,
+.link-span {
+  color: #7289da;
+}
+.link-span:hover {
+  text-decoration: underline;
+}
+.container-form {
+  width: 30%;
+}
+
+@media (max-width: 960px) {
+  .container-form {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
