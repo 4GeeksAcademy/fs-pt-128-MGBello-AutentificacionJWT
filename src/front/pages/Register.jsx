@@ -112,8 +112,8 @@ export const Register = () => {
                         }
                     </div>
                     <div className="mb-3 d-flex justify-content-center align-items-center">
-                        <Link to="/">
-                            ¿Ya tienes una cuenta? Inicia sesión
+                        <Link to="/" className="text-decoration-none">
+                            <p className="link-span">¿Ya tienes una cuenta? Inicia sesión</p>
                         </Link>
                     </div>
                     <button type="submit" className="btn btn-discord text-white w-100">Crear cuenta</button>
